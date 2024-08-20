@@ -1,12 +1,20 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "6dfe",
+      "nombre": "jake",
+      "apellidos": "sanchez",
+      "correo": "jake@gmail.com",
+      "contrasena": "jake"
+    }
+  ],
   "admins": [
     {
-      "id": "ce38",
-      "nombre_admi": "Adriana",
-      "apellidos_admi": "Reyes",
-      "correo_admi": "adriana@gmaiil.com",
-      "contrasena_admi": "adriana"
+      "id": "4301",
+      "nombre": "adriana",
+      "apellidos": "reyes",
+      "correo": "adriana@gmail.com",
+      "contrasena": "adriana"
     }
   ]
 }

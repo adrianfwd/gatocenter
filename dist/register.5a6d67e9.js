@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"7aYCE":[function(require,module,exports) {
+})({"slt8Y":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "bbde889def25dfbc";
+module.bundle.HMR_BUNDLE_ID = "f35eca8b5a6d67e9";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,14 +583,14 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"1UUDg":[function(require,module,exports) {
+},{}],"8PXZT":[function(require,module,exports) {
 var _postJs = require("/servicios/post.js");
 const nombre = document.getElementById("nombre");
 const apellidos = document.getElementById("apellidos");
 const correo = document.getElementById("correo");
 const contrasena = document.getElementById("contrasena");
 const codigo = document.getElementById("codigo");
-const btn_admi = document.getElementById("btn");
+const btn = document.getElementById("btn");
 btn.addEventListener("click", function() {
     if (codigo.value != "") {
         if (codigo.value == 0) {
@@ -679,6 +679,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["7aYCE","1UUDg"], "1UUDg", "parcelRequire6682")
+},{}]},["slt8Y","8PXZT"], "8PXZT", "parcelRequire6682")
 
-//# sourceMappingURL=admin.ef25dfbc.js.map
+//# sourceMappingURL=register.5a6d67e9.js.map
