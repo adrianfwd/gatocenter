@@ -16,5 +16,14 @@
       "correo": "adriana@gmail.com",
       "contrasena": "adriana"
     }
+  ],
+  "PCsolicitud": [
+    {
+      "id": "e570",
+      "nombre": "adriana",
+      "pc": "vvvvv",
+      "salida": "2024-08-21",
+      "regreso": "2024-09-22"
+    }
   ]
 }

@@ -608,6 +608,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addAdmi", ()=>addAdmi);
 parcelHelpers.export(exports, "addUser", ()=>addUser);
+parcelHelpers.export(exports, "addSolicitud", ()=>addSolicitud);
 const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
     try {
         const response = await fetch("http://localhost:3001/admins", {
@@ -640,6 +641,26 @@ const addUser = async (nombre, apellidos, correo, contrasena)=>{
                 apellidos: apellidos,
                 correo: correo,
                 contrasena: contrasena
+            })
+        });
+        const data = await response.json(); //esperando a que se realice la funcion de conversion anterior          
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+};
+const addSolicitud = async (nombre, pc, fecha_salida, fecha_regreso)=>{
+    try {
+        const response = await fetch("http://localhost:3001/PCsolicitud", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nombre: nombre,
+                pc: pc,
+                salida: fecha_salida,
+                regreso: fecha_regreso
             })
         });
         const data = await response.json(); //esperando a que se realice la funcion de conversion anterior          
