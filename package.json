@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/register.html --open",
+    "start": "parcel src/adm.html --open",
     "server": "json-server --port 3001 --watch servidores/db.json"
   },
   "keywords": [],
