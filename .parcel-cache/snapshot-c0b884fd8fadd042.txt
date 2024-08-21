@@ -1,13 +1,13 @@
 5916
 86C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\caniuse-lite\data\regions\KI.js133686489418341115 0
 85C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\css-what\lib\commonjs\parse.js133686489398553684 0
-57C:\Users\Latitude 5490\Desktop\gatocenter\dist\index.html133687298290020465 0
+57C:\Users\Latitude 5490\Desktop\gatocenter\dist\index.html133687312372838100 0
 83C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\ordered-binary\tests\test.js133686489399487294 0
 119C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@swc\helpers\_\_class_static_private_field_spec_set\package.json133686489413932111 0
 85C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\type-fest\source\asyncify.d.ts133686489398707152 0
 99C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\csso\node_modules\css-tree\lib\syntax\atrule133686489414059741 1
 77C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\supports-color\license133686489392672636 0
-52C:\Users\Latitude 5490\Desktop\gatocenter\servidores133686644057881658 1
+52C:\Users\Latitude 5490\Desktop\gatocenter\servidores133687298704798710 1
 96C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\reporter-dev-server\src\Server.js133686489399447328 0
 101C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\csso\node_modules\css-tree\lib\syntax\function133686489414422295 1
 124C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeViewBox.js133686489408051329 0
@@ -50,7 +50,7 @@
 86C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\source-map-js\lib\quick-sort.js133686489399549465 0
 77C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\commander\package.json133686489398410611 0
 52C:\Users\Latitude 5490\Desktop\gatocenter\.gitignore133686433708284618 0
-46C:\Users\Latitude 5490\Desktop\gatocenter\dist133687298290992357 1
+46C:\Users\Latitude 5490\Desktop\gatocenter\dist133687312372849952 1
 82C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\graph\lib\BitSet.js133686489400404855 0
 111C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\csso\node_modules\css-tree\lib\syntax\atrule\supports.js133686489414059741 0
 74C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\type-fest\readme.md133686489397352207 0
@@ -98,7 +98,7 @@
 75C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\profiler\src133686489401629781 1
 61C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\base-x133686489397864094 1
 78C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\supports-color\index.js133686489394393196 0
-56C:\Users\Latitude 5490\Desktop\gatocenter\src\index.html133687298182313507 0
+56C:\Users\Latitude 5490\Desktop\gatocenter\src\index.html133687312372632935 0
 63C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\error-ex133686489397532001 1
 97C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\csso\node_modules\css-tree\dist\csstree.js133686489412123583 0
 116C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\scope133686489411214976 1
@@ -126,7 +126,6 @@
 122C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeAttrs.js133686489405752831 0
 88C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\caniuse-lite\data\features\es5.js133686489415528896 0
 94C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@swc\helpers\esm\_is_native_function.js133686489411631244 0
-60C:\Users\Latitude 5490\Desktop\gatocenter\servidores\db.json133687297906581911 0
 67C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\js-yaml\dist133686489405032650 1
 126C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\css-select\node_modules\entities\lib\esm\generated\encode-html.d.ts.map133686489405241549 0
 76C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\utility-types\LICENSE133686489392712515 0
@@ -162,7 +161,7 @@
 84C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\react-error-overlay\README.md133686489400530707 0
 63C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\mdn-data133686489404739808 1
 86C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\update-browserslist-db\utils.js133686489398430562 0
-58C:\Users\Latitude 5490\Desktop\gatocenter\servicios\get.js133686683278997195 0
+58C:\Users\Latitude 5490\Desktop\gatocenter\servicios\get.js133687303592032560 0
 104C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\optimizer-svgo\node_modules\.bin\svgo.ps1133686489424587393 0
 85C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\type-fest\source\value-of.d.ts133686489405429619 0
 84C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\mdn-data\api\inheritance.json133686489401782593 0
@@ -4921,7 +4920,7 @@
 94C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\transformer-babel\src\babel7.js133686489397432453 0
 103C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\transformer-babel\src\babelErrorUtils.js133686489398618026 0
 104C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\transformer-babel\src\BabelTransformer.js133686489399930658 0
-64C:\Users\Latitude 5490\Desktop\gatocenter\dist\login.c82ed771.js133687298290896148 0
+64C:\Users\Latitude 5490\Desktop\gatocenter\dist\login.c82ed771.js133687303592263530 0
 94C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\packager-svg\src\SVGPackager.js133686489397432453 0
 105C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\transformer-babel\src\remapAstLocations.js133686489402520146 0
 93C:\Users\Latitude 5490\Desktop\gatocenter\node_modules\@parcel\core\lib\public\BundleGraph.js133686489405772783 0
@@ -5913,5 +5912,6 @@
 72C:\Users\Latitude 5490\Desktop\gatocenter\dist\register.23746d55.css.map133687298289610240 0
 60C:\Users\Latitude 5490\Desktop\gatocenter\dist\register.html133687298290020465 0
 67C:\Users\Latitude 5490\Desktop\gatocenter\dist\register.5a6d67e9.js133687298290911220 0
-68C:\Users\Latitude 5490\Desktop\gatocenter\dist\login.c82ed771.js.map133687298290982390 0
 71C:\Users\Latitude 5490\Desktop\gatocenter\dist\register.5a6d67e9.js.map133687298290982390 0
+60C:\Users\Latitude 5490\Desktop\gatocenter\servidores\db.json133687298704778753 0
+68C:\Users\Latitude 5490\Desktop\gatocenter\dist\login.c82ed771.js.map133687303592293123 0

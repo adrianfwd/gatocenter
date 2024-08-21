@@ -618,6 +618,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getUsuarios", ()=>getUsuarios);
 parcelHelpers.export(exports, "getAdmins", ()=>getAdmins);
+parcelHelpers.export(exports, "getSolicitud", ()=>getSolicitud);
 let getUsuarios = async ()=>{
     try {
         const response = await fetch("http://localhost:3001/users"); // obtenido los datos los local host 
@@ -630,6 +631,15 @@ let getUsuarios = async ()=>{
 let getAdmins = async ()=>{
     try {
         const response = await fetch("http://localhost:3001/admins"); // obtenido los datos los local host 
+        const data = await response.json(); //esta volviendo el localhost en un jason para poder ser leidos
+        return data;
+    } catch (error) {
+        console.log(error); //que tipo de error atrapa
+    }
+};
+let getSolicitud = async ()=>{
+    try {
+        const response = await fetch("http://localhost:3001/PCsolicitud"); // obtenido los datos los local host 
         const data = await response.json(); //esta volviendo el localhost en un jason para poder ser leidos
         return data;
     } catch (error) {
