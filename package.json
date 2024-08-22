@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
   "scripts": {
-    "start": "parcel src/index.html --open",
+    "start": "npx parcel src/index.html --open",
     "server": "json-server --port 3001 --watch servidores/db.json"
   },
   "keywords": [],

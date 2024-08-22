@@ -598,8 +598,6 @@ async function visualizacionSoli() {
     const data = await (0, _get.getSolicitud)() //el await es para esperar que se ejecute la funcion anterior
     ;
     for(let i = 0; i < data.length; i++){
-        console.log(data[i]);
-        const ids = data[i].id;
         let div_padre = document.createElement("div");
         let p = document.createElement("p");
         p.innerHTML = "nombre : " + data[i].nombre + "<br> modelo :" + data[i].pc + "<br> Salida :" + data[i].salida + "<br> Regreso :" + data[i].regreso + "<br> ID :" + data[i].id;
@@ -617,7 +615,8 @@ async function visualizacionSoli() {
         btn_denegar.addEventListener("click", function() {
             div_soli.removeChild(div_padre);
             generarHistorialDenegada(div_padre);
-            (0, _delete.eliminarSolicitud)(ids);
+            let id = data[i].id;
+            (0, _delete.eliminarSolicitud)(id);
         });
         div_soli.appendChild(div_padre);
     }
@@ -712,16 +711,19 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "eliminarSolicitud", ()=>eliminarSolicitud);
 const eliminarSolicitud = async (id)=>{
     try {
-        const response = await fetch("http://localhost:3001/PCsolicitud" + id, {
+        const response = await fetch("http://localhost:3001/PCsolicitud/" + id, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
             }
         });
-        const data = await response.json(); //esperando a que se realice la funcion de conversion anterior          
-        console.log(data);
+        let dato = await response.json();
+        console.log("Este es el dato", dato);
+        if (!response.ok) throw new Error("No se ejecuto");
+        return console.log("Se elimino el usuario");
     } catch (error) {
-        alert("fallo el metodo delete no funciono");
+        console.log("fallo el metodo delete no funciono");
+        throw error;
     }
 };
 

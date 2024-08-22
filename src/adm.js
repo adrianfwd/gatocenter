@@ -20,8 +20,8 @@ async function visualizacionSoli() {//funcion para vizualizar datos obtenidos de
   const data = await getSolicitud()//el await es para esperar que se ejecute la funcion anterior
 
   for (let i = 0; i < data.length; i++) {//por cada item creado se crea una p
-    console.log(data[i])
-    const ids = data[i].id
+    
+    
 
     let div_padre = document.createElement("div")
 
@@ -47,7 +47,9 @@ async function visualizacionSoli() {//funcion para vizualizar datos obtenidos de
     btn_denegar.addEventListener("click", function () {
       div_soli.removeChild(div_padre);
       generarHistorialDenegada(div_padre)
-      eliminarSolicitud(ids)
+     
+      let id=data[i].id
+      eliminarSolicitud(id)
     });
 
     div_soli.appendChild(div_padre);
