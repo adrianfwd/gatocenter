@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"45xT4":[function(require,module,exports) {
+})({"fPTJT":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "d692128e5330b563";
+module.bundle.HMR_BUNDLE_ID = "7978e1fc75954bd2";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,154 +583,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"4UV8X":[function(require,module,exports) {
-var _get = require("../servicios/get");
-var _delete = require("../servicios/delete");
-visualizacionSoli();
-const div_soli = document.getElementById("solicitudes");
-//var solicitudes = await getSolicitud()
-//solicitudes.forEach(user => {
-//    const soli = document.createElement('p'); // Crear un elemento li para cada usuario
-//    p.innerText = user.nombre; // Asignar el nombre del usuario al contenido del li
-//    div_soli.appendChild(soli); // Añadir el elemento li al elemento ul
-//})
-async function visualizacionSoli() {
-    const data = await (0, _get.getSolicitud)() //el await es para esperar que se ejecute la funcion anterior
-    ;
-    for(let i = 0; i < data.length; i++){
-        let div_padre = document.createElement("div");
-        let p = document.createElement("p");
-        p.innerHTML = "nombre : " + data[i].nombre + "<br> modelo :" + data[i].pc + "<br> Salida :" + data[i].salida + "<br> Regreso :" + data[i].regreso + "<br> ID :" + data[i].id;
-        div_padre.appendChild(p);
-        let btn_aceptar = document.createElement("button");
-        btn_aceptar.innerText = "ACEPTAR";
-        div_padre.appendChild(btn_aceptar);
-        btn_aceptar.addEventListener("click", function() {
-            div_soli.removeChild(div_padre);
-            generarHistorialAceptado(div_padre);
-            let id = data[i].id;
-            (0, _delete.eliminarSolicitud)(id);
-        });
-        let btn_denegar = document.createElement("button");
-        btn_denegar.innerText = "DENEGAR";
-        div_padre.appendChild(btn_denegar);
-        btn_denegar.addEventListener("click", function() {
-            div_soli.removeChild(div_padre);
-            generarHistorialDenegada(div_padre);
-            let id = data[i].id;
-            (0, _delete.eliminarSolicitud)(id);
-        });
-        div_soli.appendChild(div_padre);
-    }
-}
-var historialGenerado = [];
-function generarHistorialAceptado(divPadre) {
-    const nombreHistorial = divPadre.querySelector("p").innerText;
-    let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
-    let historialItem = {
-        texto: nombreHistorial,
-        estado: "solicitud aceptada"
-    };
-    historialGenerado.push(historialItem);
-    localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
-}
-function generarHistorialDenegada(divPadre) {
-    const nombreHistorial = divPadre.querySelector("p").innerText;
-    let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
-    let historialItem = {
-        texto: nombreHistorial,
-        estado: "solicitud denegada"
-    };
-    historialGenerado.push(historialItem);
-    localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
-}
+},{}],"5E3o7":[function(require,module,exports) {
 
-},{"../servicios/get":"hRAmG","../servicios/delete":"443sK"}],"hRAmG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getUsuarios", ()=>getUsuarios);
-parcelHelpers.export(exports, "getAdmins", ()=>getAdmins);
-parcelHelpers.export(exports, "getSolicitud", ()=>getSolicitud);
-let getUsuarios = async ()=>{
-    try {
-        const response = await fetch("http://localhost:3001/users"); // obtenido los datos los local host 
-        const data = await response.json(); //esta volviendo el localhost en un jason para poder ser leidos
-        return data;
-    } catch (error) {
-        console.log(error); //que tipo de error atrapa
-    }
-};
-let getAdmins = async ()=>{
-    try {
-        const response = await fetch("http://localhost:3001/admins"); // obtenido los datos los local host 
-        const data = await response.json(); //esta volviendo el localhost en un jason para poder ser leidos
-        return data;
-    } catch (error) {
-        console.log(error); //que tipo de error atrapa
-    }
-};
-let getSolicitud = async ()=>{
-    try {
-        const response = await fetch("http://localhost:3001/PCsolicitud"); // obtenido los datos los local host 
-        const data = await response.json(); //esta volviendo el localhost en un jason para poder ser leidos
-        return data;
-    } catch (error) {
-        console.log(error); //que tipo de error atrapa
-    }
-};
+},{}]},["fPTJT","5E3o7"], "5E3o7", "parcelRequire6682")
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"443sK":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "eliminarSolicitud", ()=>eliminarSolicitud);
-const eliminarSolicitud = async (id)=>{
-    try {
-        const response = await fetch("http://localhost:3001/PCsolicitud/" + id, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        let dato = await response.json();
-        console.log("Este es el dato", dato);
-        if (!response.ok) throw new Error("No se ejecuto");
-        return console.log("Se elimino el usuario");
-    } catch (error) {
-        console.log("fallo el metodo delete no funciono");
-        throw error;
-    }
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["45xT4","4UV8X"], "4UV8X", "parcelRequire6682")
-
-//# sourceMappingURL=adm.5330b563.js.map
+//# sourceMappingURL=historial.75954bd2.js.map

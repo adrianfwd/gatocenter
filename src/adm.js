@@ -20,24 +20,25 @@ async function visualizacionSoli() {//funcion para vizualizar datos obtenidos de
   const data = await getSolicitud()//el await es para esperar que se ejecute la funcion anterior
 
   for (let i = 0; i < data.length; i++) {//por cada item creado se crea una p
-    
-    
+
+
 
     let div_padre = document.createElement("div")
 
 
     let p = document.createElement("p")
-    p.innerHTML = "nombre : " + data[i].nombre + "<br> modelo :" + data[i].pc + "<br> Salida :" + data[i].salida + "<br> Regreso :" + data[i].regreso+ "<br> ID :" + data[i].id 
-      div_padre.appendChild(p)
+    p.innerHTML = "nombre : " + data[i].nombre + "<br> modelo :" + data[i].pc + "<br> Salida :" + data[i].salida + "<br> Regreso :" + data[i].regreso + "<br> ID :" + data[i].id
+    div_padre.appendChild(p)
 
     let btn_aceptar = document.createElement("button")
     btn_aceptar.innerText = "ACEPTAR"
     div_padre.appendChild(btn_aceptar)
 
     btn_aceptar.addEventListener("click", function () {
-      generarHistorialAceptado(div_padre)
       div_soli.removeChild(div_padre);
-
+      generarHistorialAceptado(div_padre)
+      let id = data[i].id
+      eliminarSolicitud(id)
 
     });
 
@@ -47,8 +48,8 @@ async function visualizacionSoli() {//funcion para vizualizar datos obtenidos de
     btn_denegar.addEventListener("click", function () {
       div_soli.removeChild(div_padre);
       generarHistorialDenegada(div_padre)
-     
-      let id=data[i].id
+
+      let id = data[i].id
       eliminarSolicitud(id)
     });
 
@@ -56,7 +57,7 @@ async function visualizacionSoli() {//funcion para vizualizar datos obtenidos de
   }
 }
 
-let historialGenerado = [];
+var historialGenerado = [];
 
 
 
@@ -64,19 +65,23 @@ let historialGenerado = [];
 function generarHistorialAceptado(divPadre) {
   const nombreHistorial = divPadre.querySelector("p").innerText;
 
+  let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
+
   let historialItem = {
     texto: nombreHistorial,
     estado: "solicitud aceptada"
   };
+
 
   historialGenerado.push(historialItem);
 
   localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
 }
 
-
 function generarHistorialDenegada(divPadre) {
   const nombreHistorial = divPadre.querySelector("p").innerText;
+
+  let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
 
   let historialItem = {
     texto: nombreHistorial,
@@ -84,7 +89,6 @@ function generarHistorialDenegada(divPadre) {
   };
 
   historialGenerado.push(historialItem);
+  
   localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
-
-
 }
