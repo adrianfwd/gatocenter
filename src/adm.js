@@ -1,67 +1,70 @@
 import { getSolicitud } from "../servicios/get";
 import { eliminarSolicitud } from "../servicios/delete";
 
-
-visualizacionSoli()
-
+// Referencias a elementos del DOM
 const div_soli = document.getElementById("solicitudes");
+const searchInput = document.getElementById("search");
 
-//var solicitudes = await getSolicitud()
+// Función para cargar y mostrar las solicitudes
+async function visualizacionSoli() {
+  try {
+    // Obtén todas las solicitudes
+    const data = await getSolicitud();
 
-//solicitudes.forEach(user => {
+    // Inicialmente, mostramos todas las solicitudes
+    mostrarSolicitudes(data);
 
-//    const soli = document.createElement('p'); // Crear un elemento li para cada usuario
-//    p.innerText = user.nombre; // Asignar el nombre del usuario al contenido del li
-//    div_soli.appendChild(soli); // Añadir el elemento li al elemento ul
-//})
-
-async function visualizacionSoli() {//funcion para vizualizar datos obtenidos de gettask en la pagina
-
-  const data = await getSolicitud()//el await es para esperar que se ejecute la funcion anterior
-
-  for (let i = 0; i < data.length; i++) {//por cada item creado se crea una p
-
-
-
-    let div_padre = document.createElement("div")
-
-
-    let p = document.createElement("p")
-    p.innerHTML = "nombre : " + data[i].nombre + "<br> modelo :" + data[i].pc + "<br> Salida :" + data[i].salida + "<br> Regreso :" + data[i].regreso + "<br> ID :" + data[i].id
-    div_padre.appendChild(p)
-
-    let btn_aceptar = document.createElement("button")
-    btn_aceptar.innerText = "ACEPTAR"
-    div_padre.appendChild(btn_aceptar)
-
-    btn_aceptar.addEventListener("click", function () {
-      div_soli.removeChild(div_padre);
-      generarHistorialAceptado(div_padre)
-      let id = data[i].id
-      eliminarSolicitud(id)
-
+    // Filtramos las solicitudes en función del texto de búsqueda
+    searchInput.addEventListener("input", () => {
+      const searchText = searchInput.value.toLowerCase();
+      const solicitudesFiltradas = data.filter(solicitud =>
+        solicitud.nombre.toLowerCase().includes(searchText)
+      );
+      mostrarSolicitudes(solicitudesFiltradas);
     });
 
-    let btn_denegar = document.createElement("button")
-    btn_denegar.innerText = "DENEGAR"
-    div_padre.appendChild(btn_denegar)
-    btn_denegar.addEventListener("click", function () {
-      div_soli.removeChild(div_padre);
-      generarHistorialDenegada(div_padre)
-
-      let id = data[i].id
-      eliminarSolicitud(id)
-    });
-
-    div_soli.appendChild(div_padre);
+  } catch (error) {
+    console.error('Error al obtener las solicitudes:', error);
   }
 }
 
-var historialGenerado = [];
+// Función para mostrar solicitudes en el DOM
+function mostrarSolicitudes(solicitudes) {
+  // Limpiar el contenedor antes de añadir nuevas solicitudes
+  div_soli.innerHTML = '';
 
+  // Usa map para transformar las solicitudes en elementos DOM
+  solicitudes.map((solicitud) => {
+    let div_padre = document.createElement("div");
 
+    let p = document.createElement("p");
+    p.innerHTML = `nombre : ${solicitud.nombre}<br> modelo : ${solicitud.pc}<br> Salida : ${solicitud.salida}<br> Regreso : ${solicitud.regreso}<br> ID : ${solicitud.id}`;
+    div_padre.appendChild(p);
 
+    let btn_aceptar = document.createElement("button");
+    btn_aceptar.innerText = "ACEPTAR";
+    div_padre.appendChild(btn_aceptar);
 
+    btn_aceptar.addEventListener("click", function () {
+      div_soli.removeChild(div_padre);
+      generarHistorialAceptado(div_padre);
+      eliminarSolicitud(solicitud.id);
+    });
+
+    let btn_denegar = document.createElement("button");
+    btn_denegar.innerText = "DENEGAR";
+    div_padre.appendChild(btn_denegar);
+    btn_denegar.addEventListener("click", function () {
+      div_soli.removeChild(div_padre);
+      generarHistorialDenegada(div_padre);
+      eliminarSolicitud(solicitud.id);
+    });
+
+    div_soli.appendChild(div_padre);
+  });
+}
+
+// Funciones para generar el historial
 function generarHistorialAceptado(divPadre) {
   const nombreHistorial = divPadre.querySelector("p").innerText;
 
@@ -71,7 +74,6 @@ function generarHistorialAceptado(divPadre) {
     texto: nombreHistorial,
     estado: "solicitud aceptada"
   };
-
 
   historialGenerado.push(historialItem);
 
@@ -92,3 +94,6 @@ function generarHistorialDenegada(divPadre) {
   
   localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
 }
+
+// Inicializa la visualización de solicitudes
+visualizacionSoli();

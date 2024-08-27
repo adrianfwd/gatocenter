@@ -586,7 +586,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"8PXZT":[function(require,module,exports) {
 var _postJs = require("/servicios/post.js");
 const nombre = document.getElementById("nombre");
-const apellidos = document.getElementById("apellidos");
 const correo = document.getElementById("correo");
 const contrasena = document.getElementById("contrasena");
 const codigo = document.getElementById("codigo");
@@ -595,10 +594,11 @@ btn.addEventListener("click", function() {
     if (codigo.value != "") {
         if (codigo.value == 0) {
             alert("registrado como administrador");
-            (0, _postJs.addAdmi)(nombre.value, apellidos.value, correo.value, contrasena.value);
+            (0, _postJs.addAdmi)(nombre.value, correo.value, contrasena.value);
         } else if (codigo.value == 1) {
             alert("registrado como usurio");
-            (0, _postJs.addUser)(nombre.value, apellidos.value, correo.value, contrasena.value);
+            (0, _postJs.addUser)(nombre.value, correo.value, contrasena.value);
+            window.location.href = "src/login.html";
         } else alert("no puede registrarse");
     } else alert("complete los espacios en blanco");
 });
@@ -609,7 +609,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addAdmi", ()=>addAdmi);
 parcelHelpers.export(exports, "addUser", ()=>addUser);
 parcelHelpers.export(exports, "addSolicitud", ()=>addSolicitud);
-const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
+const addAdmi = async (nombre, correo, contrasena)=>{
     try {
         const response = await fetch("http://localhost:3001/admins", {
             method: "POST",
@@ -618,7 +618,6 @@ const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
             },
             body: JSON.stringify({
                 nombre: nombre,
-                apellidos: apellidos,
                 correo: correo,
                 contrasena: contrasena
             })
@@ -629,7 +628,7 @@ const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
         console.log(error);
     }
 };
-const addUser = async (nombre, apellidos, correo, contrasena)=>{
+const addUser = async (nombre, correo, contrasena)=>{
     try {
         const response = await fetch("http://localhost:3001/users", {
             method: "POST",
@@ -638,7 +637,6 @@ const addUser = async (nombre, apellidos, correo, contrasena)=>{
             },
             body: JSON.stringify({
                 nombre: nombre,
-                apellidos: apellidos,
                 correo: correo,
                 contrasena: contrasena
             })

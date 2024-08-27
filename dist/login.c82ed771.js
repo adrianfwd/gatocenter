@@ -590,27 +590,35 @@ const contrasena = document.getElementById("contrasena");
 const codigo = document.getElementById("codigo");
 const btn = document.getElementById("btn");
 btn.addEventListener("click", async function() {
-    if (codigo.value != "" && correo.value != "" && contrasena.value != "") {
-        if (codigo.value == 0) {
-            var admi = await (0, _get.getAdmins)();
+    if (codigo.value !== "" && correo.value !== "" && contrasena.value !== "") {
+        if (codigo.value == 0) try {
+            const admi = await (0, _get.getAdmins)();
             let encontrado = admi.find((encontro)=>encontro.correo === correo.value);
             if (encontrado) {
                 if (encontrado.contrasena === contrasena.value) {
-                    alert("iniciando seccion");
-                    window.location = "index.html";
-                } else alert("contrase\xf1a, gmail o codigo incorrecto");
-            } else alert("usuario no registrado");
-        } else if (codigo.value == 1) {
-            const usuarios = (0, _get.getUsuarios)();
-            let encontrado = usuarios.find((encontrado)=>encontrado.Correo === Gmail_input);
+                    alert("Iniciando sesi\xf3n");
+                    window.location = "src/adm.html";
+                } else alert("Contrase\xf1a, correo o c\xf3digo incorrecto");
+            } else alert("Usuario no registrado");
+        } catch (error) {
+            console.error("Error al obtener administradores:", error);
+            alert("Error al obtener administradores. Revisa la consola para m\xe1s detalles.");
+        }
+        else if (codigo.value == 1) try {
+            const usuarios = await (0, _get.getUsuarios)();
+            let encontrado = usuarios.find((encontrado)=>encontrado.correo === correo.value);
             if (encontrado) {
-                if (encontrado.Contrasena == Password_input) {
-                    alert("iniciando seccion");
-                    window.location = "index.html";
-                } else alert("contrase\xf1a, gmail o codigo incorrecto");
-            } else alert("usuario no registrado");
-        } else alert("codigo incorrecto");
-    } else alert("complete los espacios en blanco");
+                if (encontrado.contrasena === contrasena.value) {
+                    alert("Iniciando sesi\xf3n como un usuario");
+                    window.location = "src/solicitudes.html";
+                } else alert("Contrase\xf1a, correo o c\xf3digo incorrecto");
+            } else alert("Usuario no registrado");
+        } catch (error) {
+            console.error("Error al obtener usuarios:", error);
+            alert("Error al obtener usuarios. Revisa la consola para m\xe1s detalles.");
+        }
+        else alert("C\xf3digo incorrecto");
+    } else alert("Complete los espacios en blanco");
 });
 
 },{"../servicios/get":"hRAmG"}],"hRAmG":[function(require,module,exports) {

@@ -603,7 +603,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addAdmi", ()=>addAdmi);
 parcelHelpers.export(exports, "addUser", ()=>addUser);
 parcelHelpers.export(exports, "addSolicitud", ()=>addSolicitud);
-const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
+const addAdmi = async (nombre, correo, contrasena)=>{
     try {
         const response = await fetch("http://localhost:3001/admins", {
             method: "POST",
@@ -612,7 +612,6 @@ const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
             },
             body: JSON.stringify({
                 nombre: nombre,
-                apellidos: apellidos,
                 correo: correo,
                 contrasena: contrasena
             })
@@ -623,7 +622,7 @@ const addAdmi = async (nombre, apellidos, correo, contrasena)=>{
         console.log(error);
     }
 };
-const addUser = async (nombre, apellidos, correo, contrasena)=>{
+const addUser = async (nombre, correo, contrasena)=>{
     try {
         const response = await fetch("http://localhost:3001/users", {
             method: "POST",
@@ -632,7 +631,6 @@ const addUser = async (nombre, apellidos, correo, contrasena)=>{
             },
             body: JSON.stringify({
                 nombre: nombre,
-                apellidos: apellidos,
                 correo: correo,
                 contrasena: contrasena
             })

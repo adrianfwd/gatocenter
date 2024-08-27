@@ -586,21 +586,35 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 },{}],"4UV8X":[function(require,module,exports) {
 var _get = require("../servicios/get");
 var _delete = require("../servicios/delete");
-visualizacionSoli();
+// Referencias a elementos del DOM
 const div_soli = document.getElementById("solicitudes");
-//var solicitudes = await getSolicitud()
-//solicitudes.forEach(user => {
-//    const soli = document.createElement('p'); // Crear un elemento li para cada usuario
-//    p.innerText = user.nombre; // Asignar el nombre del usuario al contenido del li
-//    div_soli.appendChild(soli); // Añadir el elemento li al elemento ul
-//})
+const searchInput = document.getElementById("search");
+// Función para cargar y mostrar las solicitudes
 async function visualizacionSoli() {
-    const data = await (0, _get.getSolicitud)() //el await es para esperar que se ejecute la funcion anterior
-    ;
-    for(let i = 0; i < data.length; i++){
+    try {
+        // Obtén todas las solicitudes
+        const data = await (0, _get.getSolicitud)();
+        // Inicialmente, mostramos todas las solicitudes
+        mostrarSolicitudes(data);
+        // Filtramos las solicitudes en función del texto de búsqueda
+        searchInput.addEventListener("input", ()=>{
+            const searchText = searchInput.value.toLowerCase();
+            const solicitudesFiltradas = data.filter((solicitud)=>solicitud.nombre.toLowerCase().includes(searchText));
+            mostrarSolicitudes(solicitudesFiltradas);
+        });
+    } catch (error) {
+        console.error("Error al obtener las solicitudes:", error);
+    }
+}
+// Función para mostrar solicitudes en el DOM
+function mostrarSolicitudes(solicitudes) {
+    // Limpiar el contenedor antes de añadir nuevas solicitudes
+    div_soli.innerHTML = "";
+    // Usa map para transformar las solicitudes en elementos DOM
+    solicitudes.map((solicitud)=>{
         let div_padre = document.createElement("div");
         let p = document.createElement("p");
-        p.innerHTML = "nombre : " + data[i].nombre + "<br> modelo :" + data[i].pc + "<br> Salida :" + data[i].salida + "<br> Regreso :" + data[i].regreso + "<br> ID :" + data[i].id;
+        p.innerHTML = `nombre : ${solicitud.nombre}<br> modelo : ${solicitud.pc}<br> Salida : ${solicitud.salida}<br> Regreso : ${solicitud.regreso}<br> ID : ${solicitud.id}`;
         div_padre.appendChild(p);
         let btn_aceptar = document.createElement("button");
         btn_aceptar.innerText = "ACEPTAR";
@@ -608,8 +622,7 @@ async function visualizacionSoli() {
         btn_aceptar.addEventListener("click", function() {
             div_soli.removeChild(div_padre);
             generarHistorialAceptado(div_padre);
-            let id = data[i].id;
-            (0, _delete.eliminarSolicitud)(id);
+            (0, _delete.eliminarSolicitud)(solicitud.id);
         });
         let btn_denegar = document.createElement("button");
         btn_denegar.innerText = "DENEGAR";
@@ -617,13 +630,12 @@ async function visualizacionSoli() {
         btn_denegar.addEventListener("click", function() {
             div_soli.removeChild(div_padre);
             generarHistorialDenegada(div_padre);
-            let id = data[i].id;
-            (0, _delete.eliminarSolicitud)(id);
+            (0, _delete.eliminarSolicitud)(solicitud.id);
         });
         div_soli.appendChild(div_padre);
-    }
+    });
 }
-var historialGenerado = [];
+// Funciones para generar el historial
 function generarHistorialAceptado(divPadre) {
     const nombreHistorial = divPadre.querySelector("p").innerText;
     let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
@@ -644,6 +656,8 @@ function generarHistorialDenegada(divPadre) {
     historialGenerado.push(historialItem);
     localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
 }
+// Inicializa la visualización de solicitudes
+visualizacionSoli();
 
 },{"../servicios/get":"hRAmG","../servicios/delete":"443sK"}],"hRAmG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
