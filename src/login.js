@@ -32,7 +32,7 @@ btn.addEventListener("click", async function () {
         if (encontrado) {
           if (encontrado.contrasena === contrasena.value) {
             alert("Iniciando sesión como un usuario");
-            window.location = "src/solicitudes.html";
+            window.location = "src/solicitud.html";
           } else {
             alert("Contraseña, correo o código incorrecto");
           }

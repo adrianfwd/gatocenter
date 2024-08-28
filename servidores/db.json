@@ -47,8 +47,21 @@
       "nombre": "q",
       "correo": "q",
       "contrasena": "q"
+    },
+    {
+      "id": "9135",
+      "nombre": "finn",
+      "correo": "finn",
+      "contrasena": "finn"
     }
   ],
-  "admins": [],
+  "admins": [
+    {
+      "id": "6c4e",
+      "nombre": "marce",
+      "correo": "marce",
+      "contrasena": "marce"
+    }
+  ],
   "PCsolicitud": []
 }

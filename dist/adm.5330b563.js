@@ -745,6 +745,6 @@ const eliminarSolicitud = async (id)=>{
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["45xT4","4UV8X"], "4UV8X", "parcelRequire6682")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["45xT4","4UV8X"], "4UV8X", "parcelRequire1c86")
 
 //# sourceMappingURL=adm.5330b563.js.map

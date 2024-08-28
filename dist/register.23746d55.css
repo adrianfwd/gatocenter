@@ -10,23 +10,11 @@ body {
 .di {
   color: #2d162c;
   background-color: #9775a6;
-}
-
-.img_gato {
-  background-color: #fff;
-}
-
-.parent {
-  border: 5px solid #683a68;
-  border-radius: 15px;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  width: 800px;
-  height: 450px;
-  margin-top: 90px;
-  margin-left: 250px;
-  display: grid;
-  overflow: hidden;
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  margin-top: 40px;
+  margin-left: 400px;
 }
 
 label {

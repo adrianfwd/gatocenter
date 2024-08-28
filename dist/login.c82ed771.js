@@ -610,7 +610,7 @@ btn.addEventListener("click", async function() {
             if (encontrado) {
                 if (encontrado.contrasena === contrasena.value) {
                     alert("Iniciando sesi\xf3n como un usuario");
-                    window.location = "src/solicitudes.html";
+                    window.location = "src/solicitud.html";
                 } else alert("Contrase\xf1a, correo o c\xf3digo incorrecto");
             } else alert("Usuario no registrado");
         } catch (error) {
@@ -685,6 +685,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["d2jlY","lgyI9"], "lgyI9", "parcelRequire6682")
+},{}]},["d2jlY","lgyI9"], "lgyI9", "parcelRequire1c86")
 
 //# sourceMappingURL=login.c82ed771.js.map

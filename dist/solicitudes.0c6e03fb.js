@@ -692,6 +692,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["kIezu","k3FyV"], "k3FyV", "parcelRequire6682")
+},{}]},["kIezu","k3FyV"], "k3FyV", "parcelRequire1c86")
 
 //# sourceMappingURL=solicitudes.0c6e03fb.js.map

@@ -1,0 +1,46 @@
+body{
+    background-color: #2d162c;
+}
+
+.titu{
+    text-align: center;
+    color: #2d162c;
+}
+
+.regi{
+    margin-left: 400px;
+    background-color: #9775a6; 
+    height: 530px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+label{
+    margin-left: 80px;
+}
+
+input{
+    color: #2d162c;      
+    background-color: #9775a6; 
+    margin-left: 80px;
+    height: 30px;
+    width: 230px;
+    border-left: none;
+    border-right: none;
+    border-top: none; 
+    border-bottom-color:#2d162c;
+}
+
+input[type="text"]::placeholder {
+    color: #683a68;
+}
+
+button{
+    margin-left: 160px;
+    height: 40px;
+    width: 80px;
+    background-color: #683a68;
+    color: #2d162c;
+    border-radius: 5px;
+    border: none;
+}

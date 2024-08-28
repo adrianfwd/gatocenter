@@ -1,0 +1,50 @@
+body {
+  background-color: #2d162c;
+}
+
+.titu {
+  text-align: center;
+  color: #2d162c;
+}
+
+.regi {
+  background-color: #9775a6;
+  border-radius: 10px;
+  width: 400px;
+  height: 530px;
+  margin-left: 400px;
+}
+
+label {
+  margin-left: 80px;
+}
+
+input {
+  color: #2d162c;
+  background-color: #9775a6;
+  border-color: currentColor currentColor #2d162c;
+  border-top-style: none;
+  border-top-width: medium;
+  border-left-style: none;
+  border-left-width: medium;
+  border-right-style: none;
+  border-right-width: medium;
+  width: 230px;
+  height: 30px;
+  margin-left: 80px;
+}
+
+input[type="text"]::placeholder {
+  color: #683a68;
+}
+
+button {
+  color: #2d162c;
+  background-color: #683a68;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  margin-left: 160px;
+}
+/*# sourceMappingURL=solicitudes.76e58869.css.map */

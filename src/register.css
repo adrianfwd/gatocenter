@@ -8,27 +8,15 @@ body{
 }
 
 .di{
-    background-color:#9775a6 ;
+    margin-top: 40px;
     color: #2d162c;
-}
-.img_gato{
-    background-color: white;
+    margin-left: 400px;
+    background-color: #9775a6; 
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
 }
 
-.parent{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    border-radius: 15px;
-    width: 800px;
-    height: 450px;
-    overflow: hidden;
-    margin-left: 250px;
-    margin-top: 90px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #683a68;
-}
 
 label{
     margin-left: 80px;
