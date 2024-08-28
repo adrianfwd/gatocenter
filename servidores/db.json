@@ -63,5 +63,20 @@
       "contrasena": "marce"
     }
   ],
-  "PCsolicitud": []
+  "PCsolicitud": [
+    {
+      "id": "48ac",
+      "nombre": "jake",
+      "pc": "vvvvv",
+      "salida": "0022-02-22",
+      "regreso": "2222-02-22"
+    },
+    {
+      "id": "c3ae",
+      "nombre": "jake",
+      "pc": "22",
+      "salida": "0222-02-22",
+      "regreso": "222222-02-22"
+    }
+  ]
 }

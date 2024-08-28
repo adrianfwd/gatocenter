@@ -2,6 +2,11 @@ body {
   background-color: #2d162c;
 }
 
+nav, footer {
+  background-color: #9775a6;
+  height: 90px;
+}
+
 .titu {
   text-align: center;
   color: #2d162c;
@@ -46,5 +51,10 @@ button {
   width: 80px;
   height: 40px;
   margin-left: 160px;
+}
+
+a {
+  color: #2d162c;
+  text-decoration: none;
 }
 /*# sourceMappingURL=solicitudes.76e58869.css.map */
