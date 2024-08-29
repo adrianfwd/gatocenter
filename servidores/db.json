@@ -53,6 +53,18 @@
       "nombre": "finn",
       "correo": "finn",
       "contrasena": "finn"
+    },
+    {
+      "id": "0245",
+      "nombre": "bolita",
+      "correo": "bolita",
+      "contrasena": "bolita"
+    },
+    {
+      "id": "0bd0",
+      "nombre": "bolita",
+      "correo": "bolita",
+      "contrasena": "bolita"
     }
   ],
   "admins": [
@@ -61,22 +73,21 @@
       "nombre": "marce",
       "correo": "marce",
       "contrasena": "marce"
+    },
+    {
+      "id": "5d76",
+      "nombre": "pedro",
+      "correo": "pedro",
+      "contrasena": "pedro"
     }
   ],
   "PCsolicitud": [
     {
-      "id": "48ac",
-      "nombre": "jake",
-      "pc": "vvvvv",
-      "salida": "0022-02-22",
-      "regreso": "2222-02-22"
-    },
-    {
-      "id": "c3ae",
-      "nombre": "jake",
-      "pc": "22",
-      "salida": "0222-02-22",
-      "regreso": "222222-02-22"
+      "id": "57a7",
+      "nombre": "jamphier",
+      "pc": "utf",
+      "salida": "2024-08-30",
+      "regreso": "2024-09-01"
     }
   ]
 }

@@ -12,15 +12,15 @@ async function visualizacionSoli() {
     const data = await getSolicitud();
 
     // Inicialmente, mostramos todas las solicitudes
-    mostrarSolicitudes(data);
+    mostrarSolicitudes(data);//se llam  la funcon 
 
     // Filtramos las solicitudes en función del texto de búsqueda
-    searchInput.addEventListener("input", () => {
+    searchInput.addEventListener("input", () => {//????
       const searchText = searchInput.value.toLowerCase();
       const solicitudesFiltradas = data.filter(solicitud =>
         solicitud.nombre.toLowerCase().includes(searchText)
       );
-      mostrarSolicitudes(solicitudesFiltradas);
+      mostrarSolicitudes(solicitudesFiltradas);//??
     });
 
   } catch (error) {
@@ -29,15 +29,15 @@ async function visualizacionSoli() {
 }
 
 // Función para mostrar solicitudes en el DOM
-function mostrarSolicitudes(solicitudes) {
+function mostrarSolicitudes(solicitudes) {//de donde salio solicitudes? se lo llamo del id del html
   // Limpiar el contenedor antes de añadir nuevas solicitudes
   div_soli.innerHTML = '';
 
   // Usa map para transformar las solicitudes en elementos DOM
-  solicitudes.map((solicitud) => {
+  solicitudes.map((solicitud) => {//?? llama solicitudes del dom, .map transform el div solicitudes en un vector, solicitud guarda los div creados en el vector solicitudes
     let div_padre = document.createElement("div");
 
-    let p = document.createElement("p");
+    let p = document.createElement("p");//solicitud trae de data el nombre, pc, salida.
     p.innerHTML = `nombre : ${solicitud.nombre}<br> modelo : ${solicitud.pc}<br> Salida : ${solicitud.salida}<br> Regreso : ${solicitud.regreso}<br> ID : ${solicitud.id}`;
     div_padre.appendChild(p);
 
@@ -47,7 +47,7 @@ function mostrarSolicitudes(solicitudes) {
 
     btn_aceptar.addEventListener("click", function () {
       div_soli.removeChild(div_padre);
-      generarHistorialAceptado(div_padre);
+      generarHistorialAceptado(div_padre);// en realidad el div padre, es un div hijo del div soli
       eliminarSolicitud(solicitud.id);
     });
 
@@ -65,10 +65,11 @@ function mostrarSolicitudes(solicitudes) {
 }
 
 // Funciones para generar el historial
-function generarHistorialAceptado(divPadre) {
+function generarHistorialAceptado(divPadre) {//div padre es una variable local temporal, 
+
   const nombreHistorial = divPadre.querySelector("p").innerText;
 
-  let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
+  let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];//??
 
   let historialItem = {
     texto: nombreHistorial,

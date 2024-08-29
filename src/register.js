@@ -21,7 +21,7 @@ if (codigo.value != "") {
         
          alert("registrado como usurio")
          addUser(nombre.value, correo.value, contrasena.value)
-         window.location.href="src/login.html" 
+         window.location.href="http://localhost:1234/login.html" 
 
     } else {
         alert("no puede registrarse")

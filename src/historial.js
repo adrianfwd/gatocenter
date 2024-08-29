@@ -1,4 +1,3 @@
-
 function obtenerHistorial() {
   const historialJSON = localStorage.getItem("historialGenerado");
   return historialJSON ? JSON.parse(historialJSON) : [];
@@ -7,11 +6,12 @@ function obtenerHistorial() {
 
 function mostrarHistorial(historial) {
   const historialContainer = document.getElementById("historial");
-  historialContainer.innerHTML = ''; // Limpiar el contenedor antes de mostrar
+  historialContainer.innerHTML = '';
 
   historial.forEach(item => {
     const divItem = document.createElement("div");
-    divItem.classList.add("historial-item");
+    divItem.classList.add("his");
+    divItem.setAttribute("id", "tarjeta");
     divItem.innerText = `${item.texto} - Estado: ${item.estado}`;
     historialContainer.appendChild(divItem);
   });

@@ -9,7 +9,6 @@ export let getUsuarios = async () => { //todos los asyn necesitan un await, un t
      }
   }
 //------------------------------------------------------------------------------------------------------------------
-
 export let getAdmins = async () => { //todos los asyn necesitan un await, un try y catch
     try { 
       const response = await fetch( "http://localhost:3001/admins"); // obtenido los datos los local host 
@@ -20,7 +19,6 @@ export let getAdmins = async () => { //todos los asyn necesitan un await, un try
       console.log(error);//que tipo de error atrapa
      }
   }
-
 //----------------------------------------------------------------------------------------------------------------------
 export let getSolicitud = async () => { //todos los asyn necesitan un await, un try y catch
   try { 

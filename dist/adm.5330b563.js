@@ -595,12 +595,12 @@ async function visualizacionSoli() {
         // Obtén todas las solicitudes
         const data = await (0, _get.getSolicitud)();
         // Inicialmente, mostramos todas las solicitudes
-        mostrarSolicitudes(data);
+        mostrarSolicitudes(data); //se llam  la funcon 
         // Filtramos las solicitudes en función del texto de búsqueda
         searchInput.addEventListener("input", ()=>{
             const searchText = searchInput.value.toLowerCase();
             const solicitudesFiltradas = data.filter((solicitud)=>solicitud.nombre.toLowerCase().includes(searchText));
-            mostrarSolicitudes(solicitudesFiltradas);
+            mostrarSolicitudes(solicitudesFiltradas); //??
         });
     } catch (error) {
         console.error("Error al obtener las solicitudes:", error);
@@ -613,7 +613,7 @@ function mostrarSolicitudes(solicitudes) {
     // Usa map para transformar las solicitudes en elementos DOM
     solicitudes.map((solicitud)=>{
         let div_padre = document.createElement("div");
-        let p = document.createElement("p");
+        let p = document.createElement("p"); //solicitud trae de data el nombre, pc, salida.
         p.innerHTML = `nombre : ${solicitud.nombre}<br> modelo : ${solicitud.pc}<br> Salida : ${solicitud.salida}<br> Regreso : ${solicitud.regreso}<br> ID : ${solicitud.id}`;
         div_padre.appendChild(p);
         let btn_aceptar = document.createElement("button");
@@ -621,7 +621,7 @@ function mostrarSolicitudes(solicitudes) {
         div_padre.appendChild(btn_aceptar);
         btn_aceptar.addEventListener("click", function() {
             div_soli.removeChild(div_padre);
-            generarHistorialAceptado(div_padre);
+            generarHistorialAceptado(div_padre); // en realidad el div padre, es un div hijo del div soli
             (0, _delete.eliminarSolicitud)(solicitud.id);
         });
         let btn_denegar = document.createElement("button");
@@ -638,7 +638,7 @@ function mostrarSolicitudes(solicitudes) {
 // Funciones para generar el historial
 function generarHistorialAceptado(divPadre) {
     const nombreHistorial = divPadre.querySelector("p").innerText;
-    let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
+    let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || []; //??
     let historialItem = {
         texto: nombreHistorial,
         estado: "solicitud aceptada"

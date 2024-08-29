@@ -6,10 +6,12 @@
     });
     let dato= await response.json()
     console.log("Este es el dato",dato);
+
    if (!response.ok) {
     throw new Error("No se ejecuto");
    }    
    return console.log("Se elimino el usuario"); 
+   
     } catch(error) {     
      console.log("fallo el metodo delete no funciono");
      throw error;

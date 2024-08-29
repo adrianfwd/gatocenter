@@ -14,7 +14,7 @@ btn.addEventListener("click", async function () {
         if (encontrado) {
           if (encontrado.contrasena === contrasena.value) {
             alert("Iniciando sesión");
-            window.location = "src/adm.html";
+            window.location.href= "http://localhost:1234/adm.html";
           } else {
             alert("Contraseña, correo o código incorrecto");
           }
@@ -32,7 +32,7 @@ btn.addEventListener("click", async function () {
         if (encontrado) {
           if (encontrado.contrasena === contrasena.value) {
             alert("Iniciando sesión como un usuario");
-            window.location = "src/solicitud.html";
+            window.location.href = "http://localhost:1234/solicitudes.html";
           } else {
             alert("Contraseña, correo o código incorrecto");
           }

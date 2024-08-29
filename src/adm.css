@@ -1,0 +1,39 @@
+body{
+    background-color: #2d162c;
+    color:  #9775a6; 
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #ffffff;
+    background-color: #9775a6;
+    text-decoration: none;
+
+    padding: 2%;
+
+}
+
+input{
+    background-color: #9775a6;
+    border-radius: 5px;
+    color: #ffffff;
+    width: 40px;
+}
+::placeholder{
+    color: #ffffff;
+}
+div{
+    margin: 2%;
+    padding: 2%;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    
+}
+#solicitudes{
+    background-color: #9775a6;
+    border-radius: 5px;
+    color: #ffffff;
+}

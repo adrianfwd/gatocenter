@@ -598,7 +598,7 @@ btn.addEventListener("click", function() {
         } else if (codigo.value == 1) {
             alert("registrado como usurio");
             (0, _postJs.addUser)(nombre.value, correo.value, contrasena.value);
-            window.location.href = "src/login.html";
+            window.location.href = "http://localhost:1234/login.html";
         } else alert("no puede registrarse");
     } else alert("complete los espacios en blanco");
 });

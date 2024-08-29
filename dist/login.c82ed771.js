@@ -597,7 +597,7 @@ btn.addEventListener("click", async function() {
             if (encontrado) {
                 if (encontrado.contrasena === contrasena.value) {
                     alert("Iniciando sesi\xf3n");
-                    window.location = "src/adm.html";
+                    window.location.href = "http://localhost:1234/adm.html";
                 } else alert("Contrase\xf1a, correo o c\xf3digo incorrecto");
             } else alert("Usuario no registrado");
         } catch (error) {
@@ -610,7 +610,7 @@ btn.addEventListener("click", async function() {
             if (encontrado) {
                 if (encontrado.contrasena === contrasena.value) {
                     alert("Iniciando sesi\xf3n como un usuario");
-                    window.location = "src/solicitud.html";
+                    window.location.href = "http://localhost:1234/solicitudes.html";
                 } else alert("Contrase\xf1a, correo o c\xf3digo incorrecto");
             } else alert("Usuario no registrado");
         } catch (error) {
