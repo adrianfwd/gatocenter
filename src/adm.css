@@ -2,24 +2,21 @@ body{
     background-color: #2d162c;
     color:  #9775a6; 
 }
-a{
+nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    color: #ffffff;
-    background-color: #9775a6;
+    background-color:  #9775a6;
+    height: 200px;
+    width: 100%;
+}
+a{  
     text-decoration: none;
-
-    padding: 2%;
-
 }
 
 input{
     background-color: #9775a6;
     border-radius: 5px;
     color: #ffffff;
-    width: 40px;
+    width: 80px;
 }
 ::placeholder{
     color: #ffffff;
@@ -37,3 +34,4 @@ div{
     border-radius: 5px;
     color: #ffffff;
 }
+

@@ -1,5 +1,7 @@
 body {
+  color: #412752;
   background-color: #2d162c;
+  font-family: "Press Start 2P", cursive;
 }
 
 .titu {
@@ -7,14 +9,32 @@ body {
   color: #2d162c;
 }
 
+.parent {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: #ab97b3;
+  border-radius: 10px;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  width: 750px;
+  height: 450px;
+  margin-top: 70px;
+  margin-left: 230px;
+  display: grid;
+  overflow: hidden;
+}
+
+.img_gato {
+  background-image: url("login-gif.419aa5b8.gif");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
 .di {
   color: #2d162c;
   background-color: #9775a6;
-  border-radius: 10px;
-  width: 400px;
-  height: 450px;
-  margin-top: 50px;
-  margin-left: 400px;
 }
 
 label {
@@ -38,6 +58,7 @@ input {
 
 input[type="text"]::placeholder {
   color: #683a68;
+  font-family: "Press Start 2P", cursive;
 }
 
 button {
@@ -45,8 +66,9 @@ button {
   background-color: #683a68;
   border: none;
   border-radius: 5px;
-  width: 80px;
+  width: 100px;
   height: 40px;
-  margin-left: 160px;
+  margin-left: 140px;
+  font-family: "Press Start 2P", cursive;
 }
 /*# sourceMappingURL=login.a8529490.css.map */

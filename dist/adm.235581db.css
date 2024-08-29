@@ -4,13 +4,7 @@ body {
 }
 
 a {
-  color: #fff;
-  background-color: #9775a6;
-  justify-content: center;
-  align-items: center;
-  padding: 2%;
   text-decoration: none;
-  display: flex;
 }
 
 input {

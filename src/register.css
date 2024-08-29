@@ -1,18 +1,19 @@
 body{
     background-color: #2d162c;
+    color: #412752;
+    font-family: 'Press Start 2P', cursive
 }
 
 .titu{
     text-align: center;
-    color: #2d162c;
+
 }
 
 .di{
     margin-top: 40px;
-    color: #2d162c;
     margin-left: 400px;
     background-color: #9775a6; 
-    height: 500px;
+    height: 550px;
     width: 400px;
     border-radius: 10px;
 }
@@ -23,7 +24,7 @@ label{
 }
 
 input{
-    color: #2d162c;      
+     
     background-color: #9775a6; 
     margin-left: 80px;
     height: 30px;
@@ -32,18 +33,29 @@ input{
     border-right: none;
     border-top: none; 
     border-bottom-color:#2d162c;
+    
 }
 
 input[type="text"]::placeholder {
     color: #683a68;
+    font-family: 'Press Start 2P', cursive
 }
 
 button{
-    margin-left: 160px;
+    margin-left: 115px;
     height: 40px;
-    width: 80px;
+    width: 170px;
     background-color: #683a68;
     color: #2d162c;
     border-radius: 5px;
     border: none;
+}
+#btn{
+    font-family: 'Press Start 2P', cursive    
+}
+
+img{
+    width: 300px;
+    height: 60px;
+    margin-left: 50px;
 }

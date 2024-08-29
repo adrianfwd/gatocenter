@@ -1,18 +1,18 @@
 body {
+  color: #412752;
   background-color: #2d162c;
+  font-family: "Press Start 2P", cursive;
 }
 
 .titu {
   text-align: center;
-  color: #2d162c;
 }
 
 .di {
-  color: #2d162c;
   background-color: #9775a6;
   border-radius: 10px;
   width: 400px;
-  height: 500px;
+  height: 550px;
   margin-top: 40px;
   margin-left: 400px;
 }
@@ -22,7 +22,6 @@ label {
 }
 
 input {
-  color: #2d162c;
   background-color: #9775a6;
   border-color: currentColor currentColor #2d162c;
   border-top-style: none;
@@ -38,6 +37,7 @@ input {
 
 input[type="text"]::placeholder {
   color: #683a68;
+  font-family: "Press Start 2P", cursive;
 }
 
 button {
@@ -45,8 +45,18 @@ button {
   background-color: #683a68;
   border: none;
   border-radius: 5px;
-  width: 80px;
+  width: 170px;
   height: 40px;
-  margin-left: 160px;
+  margin-left: 115px;
+}
+
+#btn {
+  font-family: "Press Start 2P", cursive;
+}
+
+img {
+  width: 300px;
+  height: 60px;
+  margin-left: 50px;
 }
 /*# sourceMappingURL=register.23746d55.css.map */

@@ -81,13 +81,5 @@
       "contrasena": "pedro"
     }
   ],
-  "PCsolicitud": [
-    {
-      "id": "57a7",
-      "nombre": "jamphier",
-      "pc": "utf",
-      "salida": "2024-08-30",
-      "regreso": "2024-09-01"
-    }
-  ]
+  "PCsolicitud": []
 }

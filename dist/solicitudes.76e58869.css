@@ -1,15 +1,32 @@
 body {
+  box-sizing: border-box;
   background-color: #2d162c;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
 }
 
-nav, footer {
+nav {
   background-color: #9775a6;
-  height: 90px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  display: flex;
+}
+
+footer {
+  background-color: #9775a6;
+  height: 200px;
+  display: flex;
 }
 
 .titu {
   text-align: center;
   color: #2d162c;
+  font-size: medium;
 }
 
 .regi {
@@ -22,6 +39,7 @@ nav, footer {
 
 label {
   margin-left: 80px;
+  font-size: smaller;
 }
 
 input {
@@ -41,6 +59,7 @@ input {
 
 input[type="text"]::placeholder {
   color: #683a68;
+  font-family: "Press Start 2P", cursive;
 }
 
 button {
@@ -48,13 +67,44 @@ button {
   background-color: #683a68;
   border: none;
   border-radius: 5px;
-  width: 80px;
+  width: 150px;
   height: 40px;
-  margin-left: 160px;
+  margin-left: 120px;
+  font-family: "Press Start 2P", cursive;
+  font-size: smaller;
 }
 
 a {
   color: #2d162c;
+  font-family: "Press Start 2P", cursive;
   text-decoration: none;
+}
+
+p {
+  color: #2d162c;
+  margin-top: 70px;
+  margin-left: 300px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.img_gato {
+  width: 17%;
+  margin-top: -10px;
+}
+
+.salir {
+  margin-left: 55%;
+}
+
+.gato {
+  width: 100px;
+  margin-left: 17px;
+}
+
+.gatoo {
+  width: 160px;
+  height: 170px;
+  margin-top: 15px;
+  margin-left: 70px;
 }
 /*# sourceMappingURL=solicitudes.76e58869.css.map */

@@ -1,5 +1,7 @@
 body{
     background-color: #2d162c;
+    color: #412752;
+    font-family: 'Press Start 2P', cursive
 }
 
 .titu{
@@ -7,15 +9,31 @@ body{
     color: #2d162c;
 }
 
-.di{
-    margin-top: 50px;
-    background-color:#9775a6 ;
-    color: #2d162c;
-    margin-left: 400px;
-    background-color: #9775a6; 
+
+.parent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #ab97b3;
     height: 450px;
-    width: 400px;
+    width: 750px;
     border-radius: 10px;
+    overflow: hidden;
+    margin-left: 230px;
+    margin-top: 70px;
+}
+.img_gato{
+    background-image: url(./img/login-gif.gif);
+    background-size: calc(90%);
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.di{
+    color: #2d162c;
+    background-color: #9775a6; 
 }
 
 label{
@@ -36,14 +54,16 @@ input{
 
 input[type="text"]::placeholder {
     color: #683a68;
+    font-family: 'Press Start 2P', cursive
 }
 
 button{
-    margin-left: 160px;
+    margin-left: 140px;
     height: 40px;
-    width: 80px;
+    width: 100px;
     background-color: #683a68;
     color: #2d162c;
     border-radius: 5px;
     border: none;
+    font-family: 'Press Start 2P', cursive
 }
