@@ -17,7 +17,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   width: 750px;
-  height: 450px;
+  height: 500px;
   margin-top: 70px;
   margin-left: 230px;
   display: grid;
@@ -70,5 +70,12 @@ button {
   height: 40px;
   margin-left: 140px;
   font-family: "Press Start 2P", cursive;
+}
+
+a {
+  color: #412752;
+  margin-left: 137px;
+  font-size: x-small;
+  text-decoration: none;
 }
 /*# sourceMappingURL=login.a8529490.css.map */

@@ -11,14 +11,14 @@ body {
 .di {
   background-color: #9775a6;
   border-radius: 10px;
-  width: 400px;
-  height: 550px;
+  width: 450px;
+  height: 590px;
   margin-top: 40px;
   margin-left: 400px;
 }
 
 label {
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 input {
@@ -32,7 +32,7 @@ input {
   border-right-width: medium;
   width: 230px;
   height: 30px;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 input[type="text"]::placeholder {
@@ -47,7 +47,7 @@ button {
   border-radius: 5px;
   width: 170px;
   height: 40px;
-  margin-left: 115px;
+  margin-left: 130px;
 }
 
 #btn {
@@ -57,6 +57,13 @@ button {
 img {
   width: 300px;
   height: 60px;
-  margin-left: 50px;
+  margin-left: 80px;
+}
+
+a {
+  color: #412752;
+  margin-left: 137px;
+  font-size: x-small;
+  text-decoration: none;
 }
 /*# sourceMappingURL=register.23746d55.css.map */

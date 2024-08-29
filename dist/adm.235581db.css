@@ -1,9 +1,72 @@
 body {
-  color: #9775a6;
+  box-sizing: border-box;
+  color: #fff;
   background-color: #2d162c;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+}
+
+h1 {
+  text-align: center;
+}
+
+.autor {
+  color: #2d162c;
+  margin-top: 70px;
+  margin-left: 300px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.gatoo {
+  width: 160px;
+  height: 170px;
+  margin-top: 15px;
+  margin-left: 70px;
+}
+
+nav {
+  background-color: #9775a6;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  display: flex;
+}
+
+footer {
+  background-color: #9775a6;
+  height: 200px;
+  display: flex;
+}
+
+.gato {
+  width: 100px;
+  height: 70px;
+  margin-bottom: -10px;
+}
+
+.img_gato {
+  width: 17%;
+  height: 50px;
+}
+
+button {
+  color: #2d162c;
+  background-color: #683a68;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  margin-left: 20px;
+  font-family: "Press Start 2P", cursive;
+  font-size: smaller;
 }
 
 a {
+  color: #fff;
+  margin-left: 50px;
   text-decoration: none;
 }
 
@@ -11,7 +74,9 @@ input {
   color: #fff;
   background-color: #9775a6;
   border-radius: 5px;
-  width: 40px;
+  height: 40px;
+  margin-left: 200px;
+  font-family: "Press Start 2P", cursive;
 }
 
 ::placeholder {

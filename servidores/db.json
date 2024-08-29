@@ -65,6 +65,24 @@
       "nombre": "bolita",
       "correo": "bolita",
       "contrasena": "bolita"
+    },
+    {
+      "id": "e4b1",
+      "nombre": "bolita",
+      "correo": "bolita",
+      "contrasena": "bolita"
+    },
+    {
+      "id": "0d93",
+      "nombre": "bolita",
+      "correo": "bolita",
+      "contrasena": "bolita"
+    },
+    {
+      "id": "b399",
+      "nombre": "aaaa",
+      "correo": "aaaa",
+      "contrasena": "aaaa"
     }
   ],
   "admins": [
@@ -81,5 +99,20 @@
       "contrasena": "pedro"
     }
   ],
-  "PCsolicitud": []
+  "PCsolicitud": [
+    {
+      "id": "8430",
+      "nombre": "bolita",
+      "pc": "utf",
+      "salida": "2024-08-30",
+      "regreso": "2024-09-12"
+    },
+    {
+      "id": "75d0",
+      "nombre": "bolita",
+      "pc": "utf",
+      "salida": "2024-08-30",
+      "regreso": "2024-09-08"
+    }
+  ]
 }

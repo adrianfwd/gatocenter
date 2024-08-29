@@ -1,22 +1,51 @@
 body{
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    flex-direction: column;
     background-color: #2d162c;
-
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
 }
+
+footer{
+    display: flex;
+    background-color:  #9775a6;
+    height: 200px; 
+}
+
+.autor{
+    color: #2d162c;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 70px;
+    margin-left: 300px;
+}
+
+.gatoo{
+    width: 160px;
+    height: 170px;
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color:  #9775a6;
+    height: 120px;
+}
+
 #historial{
     display: grid;
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     flex-direction: column;
     background-color: #9775a6;
     margin: 2%;
-
 }
+
 section{
 display: flex;
 flex-direction: row;
@@ -25,19 +54,22 @@ align-items: center;
 height: 20%;
 width: 20%;
 }
+
 div{
     margin: 2%;
     padding: 2%;
     border: 1px solid #ffffff;
     border-radius: 5px;
     color: #ffffff;
-    
 }
 
 input{
     background-color: #9775a6;
     border-radius: 5px;
     color: #ffffff;
+    height: 40px;
+    margin-left: 100px;
+    font-family: 'Press Start 2P', cursive;
 }
 ::placeholder{
     color: #ffffff;
@@ -47,16 +79,39 @@ img{
     width: 40px;
 }
 a{
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     padding: 2%;
-
+    text-decoration: none;
 }
 
 @media  (max-width:600px){
     body{
         background-color: #9775a6;
     }
+}
+
+
+.gato{
+    height: 70px;
+    width: 100px;
+    margin-bottom: -10px;
+}
+
+.img_gato{
+    width: 17%;
+    height: 50px;
+}
+button{
+    height: 40px;
+    width: 150px;
+    background-color: #683a68;
+    color: #2d162c;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: smaller;
 }
