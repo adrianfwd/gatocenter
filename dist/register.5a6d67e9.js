@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"slt8Y":[function(require,module,exports) {
+})({"7k3HG":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -689,7 +689,7 @@ const addSolicitud = async (nombre, pc, fecha_salida, fecha_regreso)=>{
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"8JPHY"}],"8JPHY":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -719,6 +719,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["slt8Y","8PXZT"], "8PXZT", "parcelRequire1c86")
+},{}]},["7k3HG","8PXZT"], "8PXZT", "parcelRequire1c86")
 
 //# sourceMappingURL=register.5a6d67e9.js.map

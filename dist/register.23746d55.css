@@ -89,4 +89,98 @@ dialog {
   margin-top: 3%;
   margin-right: 25%;
 }
+
+@media (width <= 800px) {
+  body {
+    color: #412752;
+    background-color: #2d162c;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  .titu {
+    text-align: center;
+  }
+
+  .di {
+    background-color: #9775a6;
+    border-radius: 10px;
+    width: 430px;
+    height: 590px;
+    margin-top: 20px;
+    margin-left: 27px;
+  }
+
+  label {
+    margin-left: 100px;
+  }
+
+  input {
+    background-color: #9775a6;
+    border-color: currentColor currentColor #2d162c;
+    border-top-style: none;
+    border-top-width: medium;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-style: none;
+    border-right-width: medium;
+    width: 230px;
+    height: 30px;
+    margin-left: 100px;
+  }
+
+  input[type="text"]::placeholder {
+    color: #683a68;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  button {
+    color: #2d162c;
+    background-color: #683a68;
+    border: none;
+    border-radius: 5px;
+    width: 170px;
+    height: 40px;
+    margin-left: 130px;
+    font-family: "Press Start 2P", cursive;
+  }
+
+  #btn {
+    font-family: "Press Start 2P", cursive;
+  }
+
+  img {
+    width: 300px;
+    height: 60px;
+    margin-left: 70px;
+  }
+
+  a {
+    color: #412752;
+    margin-left: 137px;
+    font-size: x-small;
+    text-decoration: none;
+  }
+
+  dialog {
+    color: #412752;
+    text-align: center;
+    background-color: #ab97b3;
+    width: 550px;
+    height: 370px;
+  }
+
+  .tecleando {
+    height: 220px;
+    margin-right: 80px;
+  }
+
+  #boton_1, #boton_2, #boton_3 {
+    margin-right: 25%;
+  }
+
+  #boton_4 {
+    margin-top: 3%;
+    margin-right: 25%;
+  }
+}
 /*# sourceMappingURL=register.23746d55.css.map */

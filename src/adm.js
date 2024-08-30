@@ -65,7 +65,7 @@ function mostrarSolicitudes(solicitudes) {//de donde salio solicitudes? se lo ll
 }
 
 // Funciones para generar el historial
-function generarHistorialAceptado(divPadre) {//div padre es una variable local temporal, 
+function generarHistorialAceptado(divPadre) {//div padre es una variable local temporal,//aun no entiendo bien que hace ahi
 
   const nombreHistorial = divPadre.querySelector("p").innerText;
 
@@ -87,13 +87,13 @@ function generarHistorialDenegada(divPadre) {
   let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
 
   let historialItem = {
-    texto: nombreHistorial,
+    texto: nombreHistorial,//aqui se guarda el texto dentro del divPdre
     estado: "solicitud denegada"
   };
 
-  historialGenerado.push(historialItem);
+  historialGenerado.push(historialItem); //se guarda el historial item dentro de historial generado
   
-  localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
+  localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado)); //se guarfa historial generado y su contenido dentro de json
 }
 
 // Inicializa la visualización de solicitudes
