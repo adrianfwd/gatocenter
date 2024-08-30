@@ -3,33 +3,23 @@ function obtenerHistorial() {
   return historialJSON ? JSON.parse(historialJSON) : [];
 }
 
-
 function mostrarHistorial(historial) {
   const historialContainer = document.getElementById("historial");
   historialContainer.innerHTML = '';
 
-  historial.forEach(item => {
-    const divItem = document.createElement("div");
-    divItem.classList.add("his");
-    divItem.setAttribute("id", "tarjeta");
-    divItem.innerText = `${item.texto} - Estado: ${item.estado}`;
-    historialContainer.appendChild(divItem);
-  });
+  historialContainer.innerHTML = historial.reduce((html, item) => {
+    html += `<div class="his" id="tarjeta">${item.texto} - Estado: ${item.estado}</div>`;
+    return html;
+  }, '');
 }
 
-
-function filtrarHistorial(nombre) {
+function filtrarHistorial(textoBusqueda) {
   const historial = obtenerHistorial();
-  const historialFiltrado = historial.filter(item => item.texto.toLowerCase().includes(nombre.toLowerCase()));
+  const historialFiltrado = historial.reduce((resultado, item) => {
+    if (item.texto.toLowerCase().includes(textoBusqueda.toLowerCase())) {
+      resultado.push(item);
+    }
+    return resultado;
+  }, []);
   mostrarHistorial(historialFiltrado);
 }
-
-document.getElementById("buscador").addEventListener("input", (event) => {
-  const nombreBuscado = event.target.value;
-  filtrarHistorial(nombreBuscado);
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  mostrarHistorial(obtenerHistorial());
-});

@@ -367,29 +367,13 @@
       "nombre": "jamphier",
       "correo": "jamphier@gmail.com",
       "contrasena": "aaaa"
+    },
+    {
+      "id": "9297",
+      "nombre": "asd",
+      "correo": "asd",
+      "contrasena": "asd"
     }
   ],
-  "PCsolicitud": [
-    {
-      "id": "8430",
-      "nombre": "bolita",
-      "pc": "utf",
-      "salida": "2024-08-30",
-      "regreso": "2024-09-12"
-    },
-    {
-      "id": "75d0",
-      "nombre": "bolita",
-      "pc": "utf",
-      "salida": "2024-08-30",
-      "regreso": "2024-09-08"
-    },
-    {
-      "id": "10ea",
-      "nombre": "Adriana",
-      "pc": "aaaaaaaaa",
-      "salida": "2024-08-29",
-      "regreso": "2024-09-08"
-    }
-  ]
+  "PCsolicitud": []
 }

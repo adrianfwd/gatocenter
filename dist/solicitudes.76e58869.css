@@ -107,4 +107,26 @@ p {
   margin-top: 15px;
   margin-left: 70px;
 }
+
+dialog {
+  color: #412752;
+  text-align: center;
+  background-color: #ab97b3;
+  width: 500px;
+  height: 350px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.tecleando {
+  width: 90%;
+}
+
+#boton_1 {
+  margin-top: 200%;
+  margin-right: 25%;
+}
+
+#boton_2 {
+  margin-right: 25%;
+}
 /*# sourceMappingURL=solicitudes.76e58869.css.map */
