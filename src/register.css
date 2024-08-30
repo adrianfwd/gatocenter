@@ -49,6 +49,7 @@ button{
     color: #2d162c;
     border-radius: 5px;
     border: none;
+    font-family: 'Press Start 2P', cursive  
 }
 #btn{
     font-family: 'Press Start 2P', cursive    
@@ -65,4 +66,31 @@ a{
     text-decoration: none;
     margin-left: 137px;
     font-size: x-small;
+}
+dialog {
+    background-color: #ab97b3;
+    color: #412752;
+    text-align: center;
+    height: 370px;
+    width: 550px;
+    
+}
+
+.tecleando{
+    height: 220px;
+    margin-right: 80px;
+}
+
+#boton_1{
+ margin-right: 25%;
+}
+#boton_2{
+    margin-right: 25%;
+}
+#boton_3{
+    margin-right: 25%;
+}
+#boton_4{
+    margin-right: 25%;
+    margin-top: 3%;
 }

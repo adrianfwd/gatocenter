@@ -17,7 +17,7 @@ body {
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   width: 750px;
-  height: 500px;
+  height: 470px;
   margin-top: 70px;
   margin-left: 230px;
   display: grid;
@@ -77,5 +77,21 @@ a {
   margin-left: 137px;
   font-size: x-small;
   text-decoration: none;
+}
+
+dialog {
+  color: #412752;
+  text-align: center;
+  background-color: #ab97b3;
+  width: 500px;
+  height: 350px;
+}
+
+.tecleando {
+  width: 40%;
+}
+
+#boton_10, #boton_9, #boton_8, #boton_7, #boton_6, #boton_5, #boton_4, #boton_3, #boton_2, #boton_1 {
+  margin-right: 25%;
 }
 /*# sourceMappingURL=login.a8529490.css.map */
