@@ -117,3 +117,71 @@ dialog {
 #boton_1{
     margin-right: 25%;
 }
+
+@media (max-width: 800px) {
+    .parent{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        background-color: #ab97b3;
+        height: 470px;
+        width: 380px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-left: 100px;
+        margin-top: 70px;
+    }
+}
+.parent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: #ab97b3;
+    height: 470px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+   
+    margin-top: 70px;
+}
+input{
+    color: #2d162c;      
+    background-color: #9775a6; 
+    margin-left: 10px;
+    height: 30px;
+    width: 200px;
+    border-left: none;
+    border-right: none;
+    border-top: none; 
+    border-bottom-color:#2d162c;
+}
+label{
+    margin-left: 80px;
+    font-size: 5px;
+}
+input[type="text"]::placeholder {
+    color: #683a68;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5px;
+}
+button{
+    margin-left: 100px;
+    height: 20px;
+    width: 50px;
+    background-color: #683a68;
+    color: #2d162c;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5px;
+}
+a{
+    color: #412752;
+    text-decoration: none;
+    margin-left: 100px;
+    font-size: 5px;
+}

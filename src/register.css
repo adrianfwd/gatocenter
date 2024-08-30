@@ -94,3 +94,102 @@ dialog {
     margin-right: 25%;
     margin-top: 3%;
 }
+
+@media (max-width: 800px){
+    body{
+    background-color: #2d162c;
+    color: #412752;
+    font-family: 'Press Start 2P', cursive
+}
+
+.titu{
+    text-align: center;
+
+}
+
+.di{
+    margin-top: 20px;
+    background-color: #9775a6; 
+    height: 590px;
+    width: 430px;
+    border-radius: 10px;
+    margin-left: 27px;
+}
+
+
+label{
+    margin-left: 100px;
+}
+
+input{
+     
+    background-color: #9775a6; 
+    margin-left: 100px;
+    height: 30px;
+    width: 230px;
+    border-left: none;
+    border-right: none;
+    border-top: none; 
+    border-bottom-color:#2d162c;
+    
+}
+
+input[type="text"]::placeholder {
+    color: #683a68;
+    font-family: 'Press Start 2P', cursive
+}
+
+button{
+    margin-left: 130px;
+    height: 40px;
+    width: 170px;
+    background-color: #683a68;
+    color: #2d162c;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Press Start 2P', cursive  
+}
+#btn{
+    font-family: 'Press Start 2P', cursive    
+}
+
+img{
+    width: 300px;
+    height: 60px;
+    margin-left: 70px;
+}
+
+a{
+    color: #412752;
+    text-decoration: none;
+    margin-left: 137px;
+    font-size: x-small;
+}
+dialog {
+    background-color: #ab97b3;
+    color: #412752;
+    text-align: center;
+    height: 370px;
+    width: 550px;
+    
+}
+
+.tecleando{
+    height: 220px;
+    margin-right: 80px;
+}
+
+#boton_1{
+ margin-right: 25%;
+}
+#boton_2{
+    margin-right: 25%;
+}
+#boton_3{
+    margin-right: 25%;
+}
+#boton_4{
+    margin-right: 25%;
+    margin-top: 3%;
+}
+}
