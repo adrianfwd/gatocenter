@@ -65,9 +65,9 @@ function mostrarSolicitudes(solicitudes) {//de donde salio solicitudes? se lo ll
 }
 
 // Funciones para generar el historial
-function generarHistorialAceptado(divPadre) {//div padre es una variable local temporal, 
+function generarHistorialAceptado(div_padre) {
 
-  const nombreHistorial = divPadre.querySelector("p").innerText;
+  const nombreHistorial = div_padre.querySelector("p").innerText;
 
   let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];//??
 
@@ -81,8 +81,8 @@ function generarHistorialAceptado(divPadre) {//div padre es una variable local t
   localStorage.setItem("historialGenerado", JSON.stringify(historialGenerado));
 }
 
-function generarHistorialDenegada(divPadre) {
-  const nombreHistorial = divPadre.querySelector("p").innerText;
+function generarHistorialDenegada(div_padre) {
+  const nombreHistorial = div_padre.querySelector("p").innerText;
 
   let historialGenerado = JSON.parse(localStorage.getItem("historialGenerado")) || [];
 
